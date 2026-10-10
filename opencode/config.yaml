@@ -1,5 +1,5 @@
 name: OpenCode
-version: "1.0.1"
+version: "1.0.2"
 slug: opencode
 description: OpenCode AI coding agent (web UI) for editing your Home Assistant configuration.
 url: https://github.com/plouanis/ha-opencode-addon
