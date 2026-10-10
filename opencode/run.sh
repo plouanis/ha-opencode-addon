@@ -22,6 +22,8 @@ if [ -f /data/options.json ] && command -v node >/dev/null 2>&1; then
       server_password:   "OPENCODE_SERVER_PASSWORD",
       anthropic_api_key: "ANTHROPIC_API_KEY",
       openai_api_key:    "OPENAI_API_KEY",
+      google_api_key:    "GOOGLE_GENERATIVE_AI_API_KEY",
+      openrouter_api_key: "OPENROUTER_API_KEY",
       model:             "OPENCODE_DEFAULT_MODEL"
     };
     var out = [];
@@ -29,8 +31,13 @@ if [ -f /data/options.json ] && command -v node >/dev/null 2>&1; then
       var v = o[k];
       if (v) out.push("export " + map[k] + "=" + JSON.stringify(String(v)));
     });
-    console.log(out.join("\n"));
-  ')"
+console.log(out.join("\n"));
+    ')"
+fi
+
+# Alias for opencode's "gemini" provider naming.
+if [ -n "${GOOGLE_GENERATIVE_AI_API_KEY:-}" ]; then
+  export GEMINI_API_KEY="${GOOGLE_GENERATIVE_AI_API_KEY}"
 fi
 
 # Optional default model for the web UI.
