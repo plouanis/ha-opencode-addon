@@ -18,10 +18,14 @@ your `configuration.yaml`, automations, and scripts.
 
 - **server_password** — protect the web UI with a password (basic auth, the
   username is `opencode`).
-- **anthropic_api_key** / **openai_api_key** — provider keys exported as the
-  matching environment variables.
-- **model** — optional default model for the UI, e.g.
-  `anthropic/claude-sonnet-4-20250514` or `openai/gpt-4o`.
+- **anthropic_api_key** / **openai_api_key** / **google_api_key** /
+  **openrouter_api_key** — provider keys exported as the matching environment
+  variables.
+- **model** — optional default model for the UI. Examples:
+  - Claude: `anthropic/claude-sonnet-4-20250514`
+  - GPT: `openai/gpt-4o`
+  - Gemini (free tier at Google AI Studio): `google/gemini-2.5-flash`
+  - OpenRouter (free models available): `openrouter/deepseek/deepseek-chat:free`
 
 ## Files & folders
 
