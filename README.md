@@ -32,6 +32,8 @@ and config YAML directly.
 | `server_password`  | `OPENCODE_SERVER_PASSWORD`       | Basic-auth password for the web UI (username `opencode`) |
 | `anthropic_api_key`| `ANTHROPIC_API_KEY`              | Claude provider                     |
 | `openai_api_key`   | `OPENAI_API_KEY`                 | OpenAI provider                     |
+| `google_api_key`   | `GOOGLE_GENERATIVE_AI_API_KEY`   | Google Gemini (free tier available)  |
+| `openrouter_api_key`| `OPENROUTER_API_KEY`            | OpenRouter (free models available)   |
 | `model`            | opencode config `model`          | Default model, e.g. `anthropic/claude-sonnet-4-20250514` |
 
 Everything is persisted under the add-on's `/data` folder (sessions, auth,
