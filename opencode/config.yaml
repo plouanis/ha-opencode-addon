@@ -1,0 +1,27 @@
+name: OpenCode
+version: "1.0.0"
+slug: opencode
+description: OpenCode AI coding agent (web UI) for editing your Home Assistant configuration.
+url: https://github.com/plouanis/ha-opencode-addon
+arch:
+  - amd64
+startup: application
+boot: auto
+ingress: true
+ingress_port: 8099
+ports:
+  8099/tcp: null
+ports_description:
+  8099/tcp: OpenCode web UI (reachable through the HA ingress)
+map:
+  - config:rw
+options:
+  server_password: ""
+  anthropic_api_key: ""
+  openai_api_key: ""
+  model: ""
+schema:
+  server_password: str
+  anthropic_api_key: str
+  openai_api_key: str
+  model: str
